@@ -1,8 +1,8 @@
-const rpc = require("discord-rpc");
+import rpc from "discord-rpc";
 
 const client = new rpc.Client({ transport: "ipc" });
 
-client.on("ready", async() => {
+client.on("ready", async():Promise<void> => {
   
    await client.setActivity({
         details: "Coding nerd, loves sloths",
